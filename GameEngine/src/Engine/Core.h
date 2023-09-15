@@ -1,7 +1,7 @@
 #pragma once
 
-#ifdef HZ_PLATFORM_WINDOWS
-	#ifdef ENGINE_BUILD_DLL
+#ifdef EG_PLATFORM_WINDOWS
+	#ifdef EG_BUILD_DLL
 		#define ENGINE_API __declspec(dllexport)
 	#else
 		#define ENGINE_API __declspec(dllimport)
@@ -9,3 +9,5 @@
 #else
 	#error GameEngine only supports Windows!
 #endif
+
+#define BIT(x) (1 << x)

@@ -2,7 +2,7 @@
 
 // Files for my game engine
 
-#include <stdio.h>
+#include "Engine/Log.h"
 #include "Engine/Application.h"
 
 //======= Entry Point =======
