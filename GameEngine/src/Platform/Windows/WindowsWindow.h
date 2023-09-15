@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Engine/Window.h"
-#include "Engine/Log.h"
 
 #include <GLFW/glfw3.h>
 
@@ -31,7 +30,7 @@ namespace Engine {
 			std::string Title;
 			unsigned int Width, Height;
 			bool VSync;
-			
+
 			EventCallbackFn EventCallback;
 		};
 

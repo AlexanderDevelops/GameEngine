@@ -1,8 +1,11 @@
 #include "egpch.h"
+
 #include "WindowsWindow.h"
+#include "Engine/Log.h"
 
 namespace Engine {
 	static bool s_GLFWInitialized = false;
+
 	Window* Window::Create(const WindowProps& props)
 	{
 		return new WindowsWindow(props);
@@ -51,7 +54,7 @@ namespace Engine {
 		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
 	}
-	
+
 	void WindowsWindow::SetVSync(bool enabled)
 	{
 		if (enabled)
