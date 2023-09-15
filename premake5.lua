@@ -42,7 +42,7 @@ project "GameEngine"
 	links 
 	{
 		"GLFW",
-		"opengl132.lib"
+		"opengl32.lib"
 	}
 
 	filter "system:windows" 
