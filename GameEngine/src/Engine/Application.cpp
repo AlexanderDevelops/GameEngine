@@ -5,11 +5,10 @@
 #include "Events/Event.h"
 
 #include "Events/ApplicationEvent.h"
-#include "Events/MouseEvent.h"
 
 namespace Engine {
 	Application::Application() {
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application() {
@@ -17,11 +16,9 @@ namespace Engine {
 	}
 
 	void Application::Run() {
-		WindowResizeEvent e(1280, 720);
-		EG_TRACE(e);
-		MouseMovedEvent g(100, 100);
-		EG_WARN(g);
-
-		while (true);
+		while (m_Running) 
+		{
+			m_Window->OnUpdate();
+		}
 	}
 };
