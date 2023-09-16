@@ -68,7 +68,6 @@ namespace Engine {
 				m_ImGuiLayer->OnImGuiRender();
 			m_ImGuiLayer->End();
 
-
 			m_Window->OnUpdate();
 		}
 	}
