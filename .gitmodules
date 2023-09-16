@@ -7,3 +7,9 @@
 [submodule "GameEngine/vendor/imgui"]
 	path = GameEngine/vendor/imgui
 	url = https://github.com/TheCherno/imgui/tree/0ecca3bd130303d7b5f9322e6324fdce2efb30f8
+[submodule "Engine/vendor/glm"]
+	path = Engine/vendor/glm
+	url = https://github.com/g-truc/glm
+[submodule "GameEngine/vendor/glm"]
+	path = GameEngine/vendor/glm
+	url = https://github.com/g-truc/glm
