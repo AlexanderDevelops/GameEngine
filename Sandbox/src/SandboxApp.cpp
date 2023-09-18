@@ -29,24 +29,6 @@ public:
 	void OnEvent(Engine::Event& event) override
 	{
 	}
-
-	void OnAttach() override
-	{
-		ImGui::CreateContext();
-		ImGuiIO& io = ImGui::GetIO();
-
-		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-		io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-		io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
-
-		ImGui::StyleColorsDark();
-
-		Engine::Application& app = Engine::Application::Get();
-		GLFWwindow* window = static_cast<GLFWwindow*>(app.GetWindow().GetNativeWindow());
-
-		ImGui_ImplGlfw_InitForOpenGL(window, true);
-		ImGui_ImplOpenGL3_Init("#version 410");
-	}
 };
 
 class Sandbox : public Engine::Application
@@ -54,7 +36,6 @@ class Sandbox : public Engine::Application
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
-		// PushLayer(new Engine::ImGuiLayer());
 	}
 
 	~Sandbox() {

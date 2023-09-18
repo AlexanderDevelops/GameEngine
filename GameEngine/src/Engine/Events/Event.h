@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "Engine/Log.h"
+
 #include "Engine/Core.h"
 
 namespace Engine {
